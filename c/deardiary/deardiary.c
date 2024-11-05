@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <conio.h>
+#include <stdlib.h>
 #include <string.h>
+#include <conio.h>
 
 int signup();
 int login();
@@ -65,7 +66,7 @@ int main() {
     fclose(file);
 
 front:
-    clrscr();
+    system("cls");
     printf("======================== DEAR === DIARY ========================\n\n");
     printf("press 1 for signup\tpress 2 for login\tpress 0 for exit\n==> ");
     scanf("%d", &n);
@@ -100,7 +101,7 @@ int signup() {
     char CheckName[25];
     FILE *file;
     UN:
-    clrscr();
+    system("cls");
         printf("======================== DEAR === DIARY ========================\n\n");
     printf("Enter your e-mail: ");
     scanf("%s", user[userCount].e_mail);
@@ -144,7 +145,7 @@ int login() {
     scanf("%s", name);
     printf("Enter your password: ");
     scanf("%s", passkey);
-    clrscr();
+    system("cls");
     printf("======================== DEAR === DIARY ========================\n\n");
     for(i = 0; i < userCount; i++) {
         if(strcmp(name, user[i].user_name) == 0 && strcmp(passkey, user[i].password) == 0) {
